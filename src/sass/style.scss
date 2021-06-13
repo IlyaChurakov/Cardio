@@ -9,6 +9,10 @@
     margin: 0 auto;
 }
 
+.header__phone_media {
+    display: none;
+}
+
 @import 'blocks/promo';
 @import 'blocks/header';
 @import 'blocks/buttons';

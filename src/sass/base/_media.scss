@@ -11,6 +11,10 @@
     .header__phone {
         font-size: 17px;
     }
+    .promo {
+        background: url(../img/bg_firstScreen.png) right (center/cover) no-repeat;
+    }
+    
 }
 
 @media (max-width: 767px) {
@@ -80,17 +84,35 @@
     .promo__subheader {
         display: none;
     }
-    header {
-        display: flex;
-        flex-direction: column;
+    .header {
+        // display: block;
+        align-items: center;
+    }
+    .header__phone {
+        display: none;
+    }
+    .header__phone_media {
+        display: block;
+        span {
+            color: #fff;
+            font-size: 32px;
+        } 
     }
     .header__logo {
         margin: 0 0 20px 0;
+        img {
+            width: 80%;
+        }
     }
     .header__contacts {
         align-items: center;
+        margin: 0 0 20px 0;
+        width: 25%;
         button {
-            height: 35px;
+            display: none;
+        }
+        a {
+            text-decoration: none;
         }
     }
     .advantages__subdescr {

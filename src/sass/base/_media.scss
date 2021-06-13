@@ -1,6 +1,6 @@
 @media (max-width: 1200px) {
     .promo {
-        padding: 21px 100px 93px 100px;
+        padding: 21px 70px 93px 70px;
     }
 }
 
@@ -14,6 +14,9 @@
 }
 
 @media (max-width: 767px) {
+    .promo {
+        padding: 21px 28px 93px 28px;
+    }
     .advantages__wrapper {
         display: flex;
         flex-direction: column;
@@ -42,9 +45,19 @@
     }
     .header__logo {
         margin-right: 19px;
+        width: 275px;
+    }
+    .header__phone {
+        font-size: 21px;
+    }
+    .header__contacts button {
+        width: 210px;
     }
     .advantages__subdescr {
         font-size: 20px;
+        span {
+            font-size: 17px;
+        }
     }
     .advantages__descr {
         font-size: 27px;
@@ -57,12 +70,42 @@
 @media (max-width: 575px) {
     .promo__icons {
         width: 297px;
+        margin-top: 25px;
     }
     .promo__header {
         font-size: 35px;
         line-height: 35px;
+        margin-top: 65px;
     }
     .promo__subheader {
         display: none;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    .header__logo {
+        margin: 0 0 20px 0;
+    }
+    .header__contacts {
+        align-items: center;
+        button {
+            height: 35px;
+        }
+    }
+    .advantages__subdescr {
+        font-size: 16px;
+        span {
+            font-size: 15px;
+        }
+    }
+    .advantages__descr {
+        font-size: 24px;
+    }
+    .advantages__icon img {
+        height: 75px;
+    }
+    .advantages h1 {
+        font-size: 22px;
     }
 }

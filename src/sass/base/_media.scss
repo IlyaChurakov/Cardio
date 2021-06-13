@@ -2,6 +2,9 @@
     .promo {
         padding: 21px 70px 93px 70px;
     }
+    .consultation {
+        padding: 100px 80px 108px 80px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -14,7 +17,14 @@
     .promo {
         background: url(../img/bg_firstScreen.png) right (center/cover) no-repeat;
     }
-    
+    .consultation__header {
+        font-size: 28px;
+        line-height: 38px;
+    }
+    .consultation__subheader {
+        font-size: 17px;
+        line-height: 22px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -68,6 +78,28 @@
     }
     .advantages__icon img {
         height: 100px;
+    }
+    .consultation__header {
+        font-size: 19px;
+        line-height: 26px;
+    }
+    .consultation__subheader {
+        font-size: 15px;
+        line-height: 22px;
+    }
+    .container {
+        justify-content: center;
+        text-align: center;
+    }
+    .feed-form input {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .feed-form button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -129,5 +161,14 @@
     }
     .advantages h1 {
         font-size: 22px;
+    }
+    .consultation {
+        padding: 100px 10px 108px 10px;
+    }
+    .feed-form input {
+        width:280px
+    }
+    .feed-form button {
+        width: 280px;
     }
 }

@@ -47,12 +47,7 @@ const slider = tns({
     slideBy: 'page',
     autoplay: false,
     controls: false,
-    nav: false,
-    responsive: {
-        768: {
-          
-        }
-      }
+    nav: false
 });
 
 document.querySelector('.prev').addEventListener('click', () => {
@@ -61,3 +56,27 @@ document.querySelector('.prev').addEventListener('click', () => {
 document.querySelector('.next').addEventListener('click', () => {
     slider.goTo('next');
 });
+
+const descr = document.querySelectorAll('.catalog__wrapper_descr'),
+      main = document.querySelectorAll('.catalog__wrapper_main'),
+      btn = document.querySelectorAll('.more'),
+      tabs = document.querySelectorAll('.catalog__tab');
+
+btn.forEach((item, n) => {
+    btn[n].addEventListener('click', () => {
+        btn[n].innerHTML = (btn[n].innerHTML === 'подробнее') ? btn[n].innerHTML = 'назад' : btn[n].innerHTML = 'подробнее';
+        main[n].classList.toggle('hidden');
+        descr[n].classList.toggle('hidden');
+    });
+});
+
+tabs.forEach((item, num) => {
+    tabs[num].addEventListener('click', () => {
+        tabs.forEach((n) => {
+            n.classList.remove('active');
+        });
+        tabs[num].classList.add('active');
+    });
+});
+
+

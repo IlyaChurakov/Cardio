@@ -5,6 +5,24 @@
     .consultation {
         padding: 100px 80px 108px 80px;
     }
+    .carousel {
+        padding: 81px 125px;
+    }
+    .tns-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 1080px) {
+    .carousel {
+        padding: 81px 0;
+        .prev, .next {
+            display: none;
+        }
+        .tns-nav {
+            display: block;
+        }
+    }
 }
 
 @media (max-width: 991px) {

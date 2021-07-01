@@ -60,7 +60,8 @@ document.querySelector('.next').addEventListener('click', () => {
 const descr = document.querySelectorAll('.catalog__wrapper_descr'),
       main = document.querySelectorAll('.catalog__wrapper_main'),
       btn = document.querySelectorAll('.more'),
-      tabs = document.querySelectorAll('.catalog__tab');
+      tabs = document.querySelectorAll('.catalog__tab'),
+      content = document.querySelectorAll('.catalog__content');
 
 btn.forEach((item, n) => {
     btn[n].addEventListener('click', () => {
@@ -75,8 +76,14 @@ tabs.forEach((item, num) => {
         tabs.forEach((n) => {
             n.classList.remove('active');
         });
+        content.forEach((n) => {
+            n.classList.remove('visible');
+        });
         tabs[num].classList.add('active');
+        content[num].classList.add('visible');
     });
 });
+
+
 
 

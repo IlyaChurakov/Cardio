@@ -50,6 +50,9 @@
     .hidden {
         display: none;
     }
+    .visible {
+        display: flex;
+    }
     .more {
         display: block;
         margin: 0 auto;
@@ -97,6 +100,8 @@
             display: block;
             margin: 0 auto;
             margin-bottom: 15px;
+            max-width: 260px;
+            max-height: 200px;
         }
         &_descr {
             font-style: normal;

@@ -1,10 +1,11 @@
 .catalog {
     padding: 0 0 103px 0;
+
     .active {
         color: #FFFFFF;
-        background: #C70101;
+        background: $main-color;
         border: none;
-        line-height: 52px;
+        line-height: 52px; 
     }
     &__tabs {
         margin-top: 70px;
@@ -30,6 +31,10 @@
         color: #6B6B6B;
         transform: skewX(-25deg);
         cursor: pointer;
+        transition: 0.5s all;
+        &:hover {
+            box-shadow: 3px 3px 20px $main-color;
+        }
         div {
             transform: skewX(25deg);
         }
@@ -66,7 +71,7 @@
         border: none;
         background-color: #fff;
         text-transform: uppercase;
-        color: #C70101;
+        color: $main-color;
     }
     &__block {
         padding: 20px;
@@ -76,23 +81,32 @@
         border: 2px solid #E8E8E8;
         box-sizing: border-box;
         margin-bottom: 17px;
+        text-align: start;
         &_padding {
             padding: 20px 15px;
-            text-align: start;
+            // text-align: start;
         }
         ul {
+            position: relative;
             padding-left: 1rem;
             li {
+                position: relative;
                 width: 246px;
+                color: #555555;
                 font-style: normal;
                 font-weight: 300;
                 font-size: 14px;
                 line-height: 21px;
-                list-style-type: square;
-                color: #C70101;
+                list-style-type: none;
                 margin-bottom: 10px;
-                span {
-                    color: #555555;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    background-color: $main-color;
+                    left: -14px;
+                    top: 7px;
                 }
             }
         }
@@ -100,8 +114,8 @@
             display: block;
             margin: 0 auto;
             margin-bottom: 15px;
-            max-width: 260px;
-            max-height: 200px;
+            max-width: 100%;
+            height: 200px;
         }
         &_descr {
             font-style: normal;
@@ -129,7 +143,7 @@
             font-style: normal;
             font-weight: 500;
             font-size: 14px;
-            color: #C70101;
+            color: $main-color;
             text-transform: uppercase;
         }
     
@@ -171,24 +185,14 @@
     }
     &__btn {
         width: 50%;
-        button {
-            width: 131px;
-            height: 40px;
-            background: #C70101;
-            border-radius: 5px;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 22px;
-            text-align: center;
-            text-transform: uppercase;
-            color: #FFFFFF;
-            border: none;
-            margin-top: 19px;
-        }
     }
     &__content {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
     }
+
+    
+
+    
 }

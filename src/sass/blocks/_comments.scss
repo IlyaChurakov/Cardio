@@ -1,0 +1,47 @@
+.comments {
+    &__wrapper {
+        display: flex;
+        margin-top: 60px;
+        &:last-child {
+            margin-bottom: 50px;
+        }
+    }
+    &__avatar {
+        margin-right: 61px;
+    }
+    h1 {
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #0D0D0D;
+    }
+    h2 {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 18px;
+        color: #0D0D0D;
+        margin-bottom: 0px;
+    }
+    h3 {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        color: #646464;
+        margin-bottom: 10px;
+    }
+    &__text {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        color: #0D0D0D;
+    }
+    &__descr {
+        width: 635px;
+        text-align: start;
+    }
+    &__text {
+        // width: 93%;
+    }
+}

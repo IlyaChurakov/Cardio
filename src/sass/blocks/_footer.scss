@@ -1,12 +1,15 @@
 .footer {
-    min-height: 630px;
+    height: 630px;
+    position: relative;
     &__information {
-        display: block;
+        position: absolute;
         width: 460px;
         height: 270px;
         background-color: $main-color;
-        margin: 0 auto;
         padding: 50px 0 56px 0;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
     &__wrapper {
         display: flex;
@@ -30,6 +33,10 @@
             margin: 0 auto;
             margin-top: 12px;
             filter: invert(100%);
+            &:hover {
+                height: 30px;
+                margin-top: 9px;
+            }
         }
     }
     &__phone {
@@ -42,8 +49,12 @@
         color: #FFFFFF;
         margin-top: 36px;
         text-decoration: none;
+        &:hover {
+            color: #fff;
+            font-size: 22px;
+        }
     }
-    h1 {
+    address {
         font-weight: 300;
         font-size: 20px;
         line-height: 20px;

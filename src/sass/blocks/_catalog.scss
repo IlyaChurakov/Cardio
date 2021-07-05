@@ -72,6 +72,9 @@
         background-color: #fff;
         text-transform: uppercase;
         color: $main-color;
+        &:hover {
+            font-size: 15px;
+        }
     }
     &__block {
         padding: 20px;

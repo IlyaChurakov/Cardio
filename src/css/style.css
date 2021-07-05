@@ -113,6 +113,10 @@
   color: #FFFFFF;
 }
 
+.promo__link a:hover {
+  color: rgba(255, 255, 255, 0.719);
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -178,6 +182,11 @@
           align-items: flex-end;
 }
 
+.header__contacts button:hover {
+  -webkit-box-shadow: 3px 3px 20px #fff;
+          box-shadow: 3px 3px 20px #fff;
+}
+
 .button {
   width: 150px;
   height: 30px;
@@ -199,6 +208,11 @@
   font-size: 16px;
 }
 
+.button_main:hover {
+  -webkit-box-shadow: 3px 3px 20px #fff;
+          box-shadow: 3px 3px 20px #fff;
+}
+
 .button_consult {
   width: 303px;
   height: 54px;
@@ -206,11 +220,22 @@
   line-height: 25px;
 }
 
+.button_consult:hover {
+  -webkit-box-shadow: 3px 3px 20px #fff;
+          box-shadow: 3px 3px 20px #fff;
+}
+
 .button_mini {
   width: 131px;
   height: 40px;
   margin-top: 19px;
   font-size: 14px;
+}
+
+.button_mini:hover {
+  border: 3px solid #b30d0d;
+  -webkit-box-shadow: 3px 3px 20px #C70101;
+          box-shadow: 3px 3px 20px #C70101;
 }
 
 .advantages {
@@ -304,7 +329,7 @@
 .consultation {
   min-height: 680px;
   padding: 100px 20px 108px 20px;
-  background: url(../../img/bg_consultation.png) center center/cover no-repeat;
+  background: url(../img/bg_consultation.png) center center/cover no-repeat;
 }
 
 .consultation__header {
@@ -384,6 +409,11 @@
   height: 50px;
 }
 
+.carousel .prev img:hover {
+  width: 33px;
+  height: 53px;
+}
+
 .carousel .next {
   position: absolute;
   top: 50%;
@@ -397,6 +427,11 @@
 .carousel .next img {
   width: 31px;
   height: 50px;
+}
+
+.carousel .next img:hover {
+  width: 33px;
+  height: 53px;
 }
 
 .carousel .tns-item {
@@ -508,6 +543,10 @@
   background-color: #fff;
   text-transform: uppercase;
   color: #C70101;
+}
+
+.catalog .more:hover {
+  font-size: 15px;
 }
 
 .catalog__block {
@@ -706,16 +745,20 @@
 }
 
 .footer {
-  min-height: 630px;
+  height: 630px;
+  position: relative;
 }
 
 .footer__information {
-  display: block;
+  position: absolute;
   width: 460px;
   height: 270px;
   background-color: #C70101;
-  margin: 0 auto;
   padding: 50px 0 56px 0;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .footer__wrapper {
@@ -752,6 +795,11 @@
           filter: invert(100%);
 }
 
+.footer__icon img:hover {
+  height: 30px;
+  margin-top: 9px;
+}
+
 .footer__phone {
   display: block;
   font-family: MuseoModerno;
@@ -764,12 +812,93 @@
   text-decoration: none;
 }
 
-.footer h1 {
+.footer__phone:hover {
+  color: #fff;
+  font-size: 22px;
+}
+
+.footer address {
   font-weight: 300;
   font-size: 20px;
   line-height: 20px;
   text-align: center;
   color: #FFFFFF;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.56);
+}
+
+.overlay__hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 382px;
+  min-height: 402px;
+  background: #F2F2F2;
+}
+
+.modal__hidden {
+  display: none;
+}
+
+.modal__small {
+  min-height: 143px;
+}
+
+.modal__subtitle {
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 19px;
+  text-align: center;
+  color: #0D0D0D;
+  margin-top: 35px;
+}
+
+.modal__subtitle_small {
+  margin-top: 35px;
+}
+
+.modal__descr {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  color: #0D0D0D;
+  margin-top: 10px;
+}
+
+.modal form {
+  margin-top: 26px;
+}
+
+.modal form input {
+  margin: 5px auto;
+}
+
+.modal form button {
+  margin: 0 auto;
+}
+
+.modal__close {
+  position: absolute;
+  top: 0;
+  right: -37px;
+  font-size: 48px;
+  line-height: 21px;
+  color: #C70101;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 @media (max-width: 1200px) {

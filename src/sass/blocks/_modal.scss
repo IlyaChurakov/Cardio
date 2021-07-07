@@ -7,6 +7,13 @@
     &__hidden {
         display: none;
     }
+    .attention3, .attention4 {
+        color: rgb(0, 0, 0);
+        width: 303px;
+        text-align: center;
+        font-size: 13px;
+        margin: 0 auto;
+    }
 }
 
 .modal {
@@ -48,7 +55,7 @@
             margin: 5px auto;
         }
         button {
-            margin: 0 auto;
+            margin: 10.5px auto 40px auto;
         }
     }
     &__close {

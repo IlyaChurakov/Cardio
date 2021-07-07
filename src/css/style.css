@@ -218,6 +218,7 @@
   height: 54px;
   font-size: 16px;
   line-height: 25px;
+  margin-top: 10.5px;
 }
 
 .button_consult:hover {
@@ -347,6 +348,20 @@
   color: #FFFFFF;
 }
 
+.consultation .attention1, .consultation .attention2 {
+  color: #fff;
+  width: 303px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.consultation .attention3, .consultation .attention4 {
+  color: black;
+  width: 303px;
+  text-align: center;
+  font-size: 13px;
+}
+
 .feed-form {
   margin-top: 36px;
   display: -webkit-box;
@@ -363,7 +378,8 @@
   border-radius: 7px;
   width: 303px;
   height: 54px;
-  margin-bottom: 11px;
+  margin-bottom: 5.5px;
+  margin-top: 5.5px;
   border: none;
   padding: 0 20px 0 20px;
   font-weight: normal;
@@ -375,8 +391,8 @@
   color: #4B4B4B;
 }
 
-.feed-form input:nth-child(3) {
-  margin-bottom: 16px;
+.feed-form .red {
+  border: 2px solid red;
 }
 
 .carousel {
@@ -436,12 +452,18 @@
 
 .carousel .tns-item {
   min-height: 580px;
+  position: relative;
 }
 
 .carousel .tns-item img {
   display: block;
   margin: 0 auto;
   width: 83%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .catalog {
@@ -837,6 +859,14 @@
   display: none;
 }
 
+.overlay .attention3, .overlay .attention4 {
+  color: black;
+  width: 303px;
+  text-align: center;
+  font-size: 13px;
+  margin: 0 auto;
+}
+
 .modal {
   position: absolute;
   top: 50%;
@@ -887,7 +917,7 @@
 }
 
 .modal form button {
-  margin: 0 auto;
+  margin: 10.5px auto 40px auto;
 }
 
 .modal__close {
@@ -1185,6 +1215,23 @@
   }
   .footer__information {
     width: 78%;
+  }
+  .modal {
+    width: 280px;
+  }
+  .modal__close {
+    top: 11px;
+    right: 6px;
+  }
+  .modal input, .modal button {
+    width: 240px;
+  }
+  .modal__subtitle {
+    font-size: 15px;
+  }
+  .modal__descr {
+    font-size: 11px;
+    line-height: 11px;
   }
 }
 /*# sourceMappingURL=style.css.map */

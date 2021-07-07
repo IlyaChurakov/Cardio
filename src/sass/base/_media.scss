@@ -272,4 +272,22 @@
             width: 78%;
         }
     }
+    .modal {
+        width: 280px;
+        &__close {
+            top: 11px;
+            right: 6px;
+        }
+        input, button {
+            width: 240px;
+        }
+        &__subtitle {
+            font-size: 15px;
+        }
+        &__descr {
+            font-size: 11px;
+            line-height: 11px;
+        }
+    }
+    
 }

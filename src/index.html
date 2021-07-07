@@ -23,7 +23,7 @@
     <section class="promo">
         <div class="container">
             <header class="header">
-                <a href="#" class="header__logo">
+                <a href="#footer" class="header__logo">
                     <img src="icons/main_logo.png" alt="logo">
                 </a>
                 <div class="header__official">
@@ -73,7 +73,7 @@
                 <button class="button button_main">заказать консультацию</button>
                 <div class="promo__link">
                     или
-                    <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a>
+                    <a href="#catalog__title">ПЕРЕЙТИ В КАТАЛОГ</a>
                 </div>
             </div>
         </div>
@@ -114,8 +114,10 @@
             <h1 class="consultation__header">Получите бесплатную консультацию <br>по подбору пульсометра </h1>
             <h2 class="consultation__subheader">Просто заполните форму заявки <br>и мы перезвоним вам в течении 10 минут</h2>
             <form class="feed-form" action="#" id="main">
-                <input name="name" required type="text" placeholder="Ваше имя" class="modal__inputs1">
-                <input name="phone" required type="number" placeholder="Ваш телефон" class="modal__inputs1">
+                <input name="name" required type="text" placeholder="Ваше имя" class="modal__inputs1" id="red">
+                <div class="attention1"></div>
+                <input name="phone" required type="text" placeholder="Ваш телефон" class="modal__inputs1 mask">
+                <div class="attention2"></div>
                 <input name="email" required type="email" placeholder="Ваш E-mail" class="modal__inputs1">
                 <button class="button button_consult">заказать консультацию</button>
             </form>
@@ -140,9 +142,9 @@
         </div>
     </section>
 
-    <section class="catalog">
+    <section class="catalog" id="catalog__title">
         <div class="container">
-            <h2 class="catalog__title">Каталог пульсометров</h2>
+            <h2 class="catalog__title" >Каталог пульсометров</h2>
             <ul class="catalog__tabs">
                 <li class="catalog__tab"><div>Для фитнеса</div></li>
                 <li class="catalog__tab active"><div>для бега</div></li>
@@ -756,20 +758,20 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aeabc7601bb92f1ceff0cde7856b3687c477ea98c49bdbc4666d43ce9680e236d&amp;width=100%25&amp;height=630&amp;lang=ru_RU&amp;scroll=false"></script>
         
         <div class="footer__information">
             <address>Москва, Мясницкий проезд, д.3с1</address>
             <a href="tel: 84999228974" class="footer__phone">8 (499) 922-89-74</a>
             <div class="footer__wrapper">
-                <a href="#" class="footer__icon">
+                <a href="https://ru-ru.facebook.com/" class="footer__icon">
                     <img src="icons/facebookblack.png" alt="facebook">
                 </a>
-                <a href="#" class="footer__icon">
+                <a href="https://www.instagram.com/?hl=ru" class="footer__icon">
                     <img src="icons/instagram.png" alt="instagram">
                 </a>
-                <a href="#" class="footer__icon">
+                <a href="https://www.pinterest.ru/" class="footer__icon">
                     <img src="icons/pinterest.png" alt="pinterest">
                 </a>
             </div>
@@ -783,7 +785,9 @@
             <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
             <form class="feed-form" action="#">
                 <input name="name" required type="text" placeholder="Ваше имя" class="modal__input">
-                <input name="phone" required type="number" placeholder="Ваш телефон" class="modal__input">
+                <div class="attention3"></div>
+                <input name="phone" required type="text" placeholder="Ваш телефон" class="modal__input mask">
+                <div class="attention4"></div>
                 <input name="email" required type="email" placeholder="Ваш E-mail" class="modal__input">
                 <button class="button button_consult" id="modal__btn">заказать консультацию</button>
             </form>
@@ -795,7 +799,9 @@
             <div class="modal__descr" id="descr">Пульсометр Polar FT1</div>
             <form class="feed-form" action="#" id="form1">
                 <input name="name" required type="text" placeholder="Ваше имя" class="modal__input2">
-                <input name="phone" required type="number" placeholder="Ваш телефон" class="modal__input2">
+                <div class="attention5"></div>
+                <input name="phone" required type="text" placeholder="Ваш телефон" class="modal__input2 mask">
+                <div class="attention6"></div>
                 <input name="email" required type="email" placeholder="Ваш E-mail" class="modal__input2">
                 <button class="button button_consult" id="modal__btn2">купить</button>
             </form>
@@ -808,9 +814,8 @@
         </div>
     </div>
 
-    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="js/slick.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="js/script.js"></script>
 </body>

@@ -45,7 +45,10 @@ window.addEventListener("DOMContentLoaded", function() {
           attention34 = document.querySelector('.attention34'),
           attention5 = document.querySelector('.attention5'),
           attention6 = document.querySelector('.attention6'),
-          attention56 = document.querySelector('.attention56');
+          attention56 = document.querySelector('.attention56'),
+          forms = document.querySelectorAll('form');
+
+          console.log(forms);
 
     //Табы
     
@@ -254,6 +257,39 @@ window.addEventListener("DOMContentLoaded", function() {
             input[num].addEventListener("focus", mask, false);
             input[num].addEventListener("blur", mask, false);
         });
+
+        // forms.forEach((item, num) => {
+        //     forms[num].addEventListener('submit', (e) => {
+        //         e.preventDefault();
+        //         forms.ajax({
+        //             type: 'POST',
+        //             url: 'mailer/smart.php',
+        //             data: forms[num].serialize()
+        //         });
+        //         return false;
+        //     });
+        // });
+
+    let	idProduct = 321;
+    let qtyProduct = 2;
+
+    const request = new XMLHttpRequest(),
+            url = "ajax_quest.php",
+            params = forms[0].value + forms[1].value + forms[2].value;
+
+    request.open("POST", url, true);
+
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    request.addEventListener("readystatechange", () => {
+
+        if(request.readyState === 4 && request.status === 200) {       
+            console.log(request.responseText);
+        }
+    });
+
+    request.send(params);
+
 });
 
     

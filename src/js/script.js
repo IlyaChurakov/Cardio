@@ -48,7 +48,11 @@ window.addEventListener("DOMContentLoaded", function() {
           attention56 = document.querySelector('.attention56'),
           forms = document.querySelectorAll('form');
 
+<<<<<<< HEAD
         //   console.log(forms);
+=======
+          console.log(forms);
+>>>>>>> 6a2c932641460f8c41d3afb009db3e497b9a8cc3
 
     //Табы
     
@@ -231,6 +235,7 @@ window.addEventListener("DOMContentLoaded", function() {
             input[num].addEventListener("blur", mask, false);
         });
 
+<<<<<<< HEAD
     // Отправка данных на сервер
 
     $('form').submit(function(e) {
@@ -247,6 +252,40 @@ window.addEventListener("DOMContentLoaded", function() {
         });
         return false;
     });
+=======
+        // forms.forEach((item, num) => {
+        //     forms[num].addEventListener('submit', (e) => {
+        //         e.preventDefault();
+        //         forms.ajax({
+        //             type: 'POST',
+        //             url: 'mailer/smart.php',
+        //             data: forms[num].serialize()
+        //         });
+        //         return false;
+        //     });
+        // });
+
+    let	idProduct = 321;
+    let qtyProduct = 2;
+
+    const request = new XMLHttpRequest(),
+            url = "ajax_quest.php",
+            params = forms[0].value + forms[1].value + forms[2].value;
+
+    request.open("POST", url, true);
+
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    request.addEventListener("readystatechange", () => {
+
+        if(request.readyState === 4 && request.status === 200) {       
+            console.log(request.responseText);
+        }
+    });
+
+    request.send(params);
+
+>>>>>>> 6a2c932641460f8c41d3afb009db3e497b9a8cc3
 });
 
     

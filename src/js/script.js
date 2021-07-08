@@ -18,15 +18,39 @@ window.addEventListener("DOMContentLoaded", function() {
         slider.goTo('next');
     });
 
-    // Работы с табами
-
     const descr = document.querySelectorAll('.catalog__wrapper_descr'),
-        main = document.querySelectorAll('.catalog__wrapper_main'),
-        btn = document.querySelectorAll('.more'),
-        tabs = document.querySelectorAll('.catalog__tab'),
-        content = document.querySelectorAll('.catalog__content');
+          main = document.querySelectorAll('.catalog__wrapper_main'),
+          btn = document.querySelectorAll('.more'),
+          tabs = document.querySelectorAll('.catalog__tab'),
+          content = document.querySelectorAll('.catalog__content'),
+          modal = document.querySelectorAll('.modal'),
+          overlay = document.querySelector('.overlay'),
+          closes = document.querySelectorAll('.modal__close'),
+          btn1 = document.querySelector('.button'),
+          btn2 = document.querySelector('.button_main'),
+          btn3 = document.querySelector('.button_consult'),
+          btn4 = document.querySelectorAll('.button_mini'),
+          inputs1 = document.querySelectorAll('.modal__inputs1'),
+          inputs = document.querySelectorAll('.modal__input'),
+          modalButton = document.querySelector('#modal__btn'),
+          inputs2 = document.querySelectorAll('.modal__input2'),
+          modalButton2 = document.querySelector('#modal__btn2'),
+          titleName = document.querySelectorAll('.title-name'),
+          modalDescr = document.querySelector('#descr'),
+          attention1 = document.querySelector('.attention1'),
+          attention2 = document.querySelector('.attention2'),
+          attention12 = document.querySelector('.attention12'),
+          attention3 = document.querySelector('.attention3'),
+          attention4 = document.querySelector('.attention4'),
+          attention34 = document.querySelector('.attention34'),
+          attention5 = document.querySelector('.attention5'),
+          attention6 = document.querySelector('.attention6'),
+          attention56 = document.querySelector('.attention56');
 
+    //Табы
+    
     btn.forEach((item, n) => {
+
         btn[n].addEventListener('click', () => {
             btn[n].innerHTML = (btn[n].innerHTML === 'подробнее') ? btn[n].innerHTML = 'назад' : btn[n].innerHTML = 'подробнее';
             main[n].classList.toggle('hidden');
@@ -35,6 +59,7 @@ window.addEventListener("DOMContentLoaded", function() {
     });
 
     tabs.forEach((item, num) => {
+
         tabs[num].addEventListener('click', () => {
             tabs.forEach((n) => {
                 n.classList.remove('active');
@@ -49,137 +74,93 @@ window.addEventListener("DOMContentLoaded", function() {
 
     //Модальные окна
 
-    const modal = document.querySelectorAll('.modal'),
-        overlay = document.querySelector('.overlay'),
-        closes = document.querySelectorAll('.modal__close'),
-        btn1 = document.querySelector('.button'),
-        btn2 = document.querySelector('.button_main'),
-        btn3 = document.querySelector('.button_consult'),
-        btn4 = document.querySelectorAll('.button_mini'),
-        inputs1 = document.querySelectorAll('.modal__inputs1'),
-        inputs = document.querySelectorAll('.modal__input'),
-        modalButton = document.querySelector('#modal__btn'),
-        inputs2 = document.querySelectorAll('.modal__input2'),
-        modalButton2 = document.querySelector('#modal__btn2'),
-        titleName = document.querySelectorAll('.title-name'),
-        modalDescr = document.querySelector('#descr'),
-        attention1 = document.querySelector('.attention1'),
-        attention2 = document.querySelector('.attention2'),
-        attention3 = document.querySelector('.attention3'),
-        attention4 = document.querySelector('.attention4'),
-        attention5 = document.querySelector('.attention5'),
-        attention6 = document.querySelector('.attention6');
+    //Действия при нажатии на кнопки первой секции
 
-        console.log(modalDescr);
-
-    btn1.addEventListener('click', () => {
+    function openModal(mdl) {
         overlay.classList.remove('overlay__hidden');
         modal.forEach(() => {
-            modal[0].classList.remove('modal__hidden');
+            mdl.classList.remove('modal__hidden');
         });
+    }
+
+    btn1.addEventListener('click', () => {
+        openModal(modal[0]);
     });
 
     btn2.addEventListener('click', () => {
-            overlay.classList.remove('overlay__hidden');
-            modal.forEach(() => {
-                modal[0].classList.remove('modal__hidden');
-            });
+        openModal(modal[0]);
     });
+
+    //Действия при нажатии на кнопки секции консультации и секции каталога
 
     btn3.addEventListener('click', (e) => {
         e.preventDefault();
         inputs1.forEach(() => {
             if (inputs1[0].value !== '' && inputs1[1].value !== '' && inputs1[2].value !== '' && inputs1[0].value.length >= 2 && inputs1[0].value.length <= 10 && inputs1[1].value.length >= 17) {
                 //сделать тут отправку
-        
-                overlay.classList.remove('overlay__hidden');
-                modal.forEach(() => {
-                    modal[2].classList.remove('modal__hidden');
-                });
+                openModal(modal[2]);
             } 
         });
     });
 
     btn4.forEach((item, num) => {
         btn4[num].addEventListener('click', () => {
-
             titleName.forEach(() => {
                 modalDescr.innerHTML = `${titleName[num].innerHTML}`;
             });
+            openModal(modal[1]);
+        });
+    });
 
-            console.log(titleName[num]);
+    //Действия при нажатии на кнопку в модальных окнах
 
-            overlay.classList.remove('overlay__hidden');
-            modal.forEach(() => {
-                modal[1].classList.remove('modal__hidden');
+    function clickModalButtons(btn, elem1, elem2, elem3, modal1, modal2, array) {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            array.forEach(() => {
+
+                if (elem1.value !== '' && elem2.value !== '' && elem3.value !== '' && elem1.value.length >= 2 && elem1.value.length <= 10 && elem2.value.length >= 17) {
+                    //сделать тут отправку
+                    elem1.value = '';
+                    elem2.value = '';
+                    elem3.value = '';
+    
+                    modal.forEach(() => {
+                        modal1.classList.add('modal__hidden');
+                        modal2.classList.remove('modal__hidden');
+                    });
+                }
             });
         });
-    });
+    }
+    
+    clickModalButtons(modalButton, inputs[0], inputs[1], inputs[2], modal[0], modal[2], inputs);
+    clickModalButtons(modalButton2, inputs2[0], inputs2[1], inputs2[2], modal[1], modal[2], inputs2);
 
-    modalButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        inputs.forEach(() => {
-            if (inputs[0].value !== '' && inputs[1].value !== '' && inputs[2].value !== '' && inputs[0].value.length >= 2 && inputs[0].value.length <= 10 && inputs[1].value.length >= 17) {
-
-                //сделать тут отправку
-
-                inputs[0].value = '';
-                inputs[1].value = '';
-                inputs[2].value = '';
-
-                modal.forEach(() => {
-                    modal[0].classList.add('modal__hidden');
-                    modal[2].classList.remove('modal__hidden');
-                });
-            }
-        });
-    });
-
-    modalButton2.addEventListener('click', () => {
-        inputs2.forEach(() => {
-            if (inputs2[0].value !== '' && inputs2[1].value !== '' && inputs2[2].value !== '') {
-
-                //сделать тут отправку
-
-                inputs2[0].value = '';
-                inputs2[1].value = '';
-                inputs2[2].value = '';
-
-                modal.forEach(() => {
-                    modal[1].classList.add('modal__hidden');
-                    modal[2].classList.remove('modal__hidden');
-                });
-                
-            }
-        });
-    });
+    //Действия при нажатии на крестик в модальных окнах
 
     closes.forEach((i, n) => {
         closes[n].addEventListener('click', () => {
 
-            
-            inputs1.forEach(() => {
+            function clearFields(elem1, elem2, elem3, field1, field2, field3, array) {
+                array.forEach(() => {
     
-                inputs1[0].value = '';
-                inputs1[1].value = '';
-                inputs1[2].value = '';
-                inputs1[0].classList.remove('red');
-                inputs1[1].classList.remove('red');
-                attention1.innerHTML = '';
-                attention2.innerHTML = '';
-                
-            });
+                    elem1.value = '';
+                    elem2.value = '';
+                    elem3.value = '';
+                    elem1.classList.remove('red');
+                    elem2.classList.remove('red');
+                    elem3.classList.remove('red');
+                    field1.innerHTML = '';
+                    field2.innerHTML = '';
+                    field3.innerHTML = '';
+                    
+                });
+            }
 
-            inputs.forEach(() => {
-
-                inputs[0].value = '';
-                inputs[1].value = '';
-                inputs[2].value = '';
-                inputs[0].classList.remove('red');
-                inputs[1].classList.remove('red');
-                attention3.innerHTML = '';
-                attention4.innerHTML = '';
-            });
+            clearFields(inputs1[0], inputs1[1], inputs1[2], attention1, attention2, attention12, inputs1);
+            clearFields(inputs[0], inputs[1], inputs[2], attention3, attention4, attention34, inputs);
+            clearFields(inputs2[0], inputs2[1], inputs2[2], attention5, attention6, attention56, inputs2);
 
             modal.forEach((item, number) => {
                 modal[number].classList.add('modal__hidden');
@@ -191,56 +172,46 @@ window.addEventListener("DOMContentLoaded", function() {
 
     //Валидация форм
     
-    inputs1.forEach(() => {
+    function validationForms(elem1, elem2, elem3, field1, field2, field3, array) {
+        array.forEach(() => {
 
-        inputs1[0].addEventListener('input', () => {
-            if (inputs1[0].value.length < 2 || inputs1[0].value.length > 10) {
-                inputs1[0].classList.add('red');
-                attention1.innerHTML = 'Введите не менее 2 и не более 10 символов!';
-            } else if ( inputs1[0].value.length >= 2 && inputs1[0].value.length <= 10){
-                inputs1[0].classList.remove('red');
-                attention1.innerHTML = '';
-            }
-        });
-
-        inputs1[1].addEventListener('input', () => {
-            if (inputs1[1].value.length !== 18) {
-                inputs1[1].classList.add('red');
-                attention2.innerHTML = 'Номер телефона должен состоять из 11 цифр!';
-            } else if (inputs1[1].value.length == 18) {
-                inputs1[1].classList.remove('red');
-                attention2.innerHTML = '';
-            }
-            // console.log(inputs1[1].value.length);
-        });
-        
-    });
-
-    inputs.forEach(() => {
-
-        inputs[0].addEventListener('input', () => {
-            if (inputs[0].value.length < 2 || inputs[0].value.length > 10) {
-                inputs[0].classList.add('red');
-                attention3.innerHTML = 'Введите не менее 2 и не более 10 символов!';
-            } else if ( inputs[0].value.length >= 2 && inputs[0].value.length <= 10){
-                inputs[0].classList.remove('red');
-                attention3.innerHTML = '';
-            }
-        });
-
-        inputs[1].addEventListener('input', () => {
-            if (inputs[1].value.length < 17) {
-                inputs[1].classList.add('red');
-                attention4.innerHTML = 'Номер телефона должен состоять из 11 цифр!';
-            } else if (inputs[1].value.length >= 17) {
-                inputs[1].classList.remove('red');
-                attention4.innerHTML = '';
-            }
-            // console.log(inputs1[1].value.length);
-        });
-        
-    });
+            elem1.addEventListener('input', () => {
+                if (elem1.value.length < 2 || elem1.value.length > 10) {
+                    elem1.classList.add('red');
+                    field1.innerHTML = 'Введите не менее 2 и не более 10 символов!';
+                } else if ( elem1.value.length >= 2 && elem1.value.length <= 10){
+                    elem1.classList.remove('red');
+                    field1.innerHTML = '';
+                }
+                console.log('aaa', elem1.value.includes('@'));
+            });
     
+            elem2.addEventListener('input', () => {
+                if (elem2.value.length < 17) {
+                    elem2.classList.add('red');
+                    field2.innerHTML = 'Номер телефона должен состоять из 11 цифр!';
+                } else if (elem2.value.length >= 17) {
+                    elem2.classList.remove('red');
+                    field2.innerHTML = '';
+                }
+            });
+    
+            elem3.addEventListener('input', () => {
+                if (!elem3.value.includes('@') || !elem3.value.includes('.')) {
+                    elem3.classList.add('red');
+                    field3.innerHTML = 'email-адрес должен содержать символы: "@" и "."!';
+                } else if (elem3.value.includes('@') && elem3.value.includes('.')) {
+                    elem3.classList.remove('red');
+                    field3.innerHTML = '';
+                }
+            });
+            
+        });
+    }
+
+    validationForms(inputs1[0], inputs1[1], inputs1[2], attention1, attention2, attention12, inputs1);
+    validationForms(inputs[0], inputs[1], inputs[2], attention3, attention4, attention34, inputs);
+    validationForms(inputs2[0], inputs2[1], inputs2[2], attention5, attention6, attention56, inputs2);
 
     //Делаем маску для ввода номера
 

@@ -7,7 +7,7 @@
     &__hidden {
         display: none;
     }
-    .attention3, .attention4 {
+    .attention3, .attention4, .attention34, .attention5, .attention6, .attention56 {
         color: rgb(0, 0, 0);
         width: 303px;
         text-align: center;
@@ -53,6 +53,7 @@
         margin-top: 26px;
         input {
             margin: 5px auto;
+            outline: none;
         }
         button {
             margin: 10.5px auto 40px auto;

@@ -348,15 +348,8 @@
   color: #FFFFFF;
 }
 
-.consultation .attention1, .consultation .attention2 {
+.consultation .attention1, .consultation .attention2, .consultation .attention12 {
   color: #fff;
-  width: 303px;
-  text-align: center;
-  font-size: 13px;
-}
-
-.consultation .attention3, .consultation .attention4 {
-  color: black;
   width: 303px;
   text-align: center;
   font-size: 13px;
@@ -859,7 +852,7 @@
   display: none;
 }
 
-.overlay .attention3, .overlay .attention4 {
+.overlay .attention3, .overlay .attention4, .overlay .attention34, .overlay .attention5, .overlay .attention6, .overlay .attention56 {
   color: black;
   width: 303px;
   text-align: center;
@@ -914,6 +907,7 @@
 
 .modal form input {
   margin: 5px auto;
+  outline: none;
 }
 
 .modal form button {
@@ -1232,6 +1226,9 @@
   .modal__descr {
     font-size: 11px;
     line-height: 11px;
+  }
+  .overlay .attention3, .overlay .attention4, .overlay .attention34, .overlay .attention5, .overlay .attention6, .overlay .attention56 {
+    width: 260px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -45,7 +45,10 @@ window.addEventListener("DOMContentLoaded", function() {
           attention34 = document.querySelector('.attention34'),
           attention5 = document.querySelector('.attention5'),
           attention6 = document.querySelector('.attention6'),
-          attention56 = document.querySelector('.attention56');
+          attention56 = document.querySelector('.attention56'),
+          forms = document.querySelectorAll('form');
+
+        //   console.log(forms);
 
     //Табы
     
@@ -93,13 +96,12 @@ window.addEventListener("DOMContentLoaded", function() {
 
     //Действия при нажатии на кнопки секции консультации и секции каталога
 
-    btn3.addEventListener('click', (e) => {
-        e.preventDefault();
+    btn3.addEventListener('click', () => {
+    
         inputs1.forEach(() => {
-            if (inputs1[0].value !== '' && inputs1[1].value !== '' && inputs1[2].value !== '' && inputs1[0].value.length >= 2 && inputs1[0].value.length <= 10 && inputs1[1].value.length >= 17) {
-                //сделать тут отправку
-                openModal(modal[2]);
-            } 
+        // if (inputs1[0].value !== '' && inputs1[1].value !== '' && inputs1[2].value !== '' && inputs1[0].value.length >= 2 && inputs1[0].value.length <= 10 && inputs1[1].value.length >= 17) {
+            openModal(modal[2]);
+        // } 
         });
     });
 
@@ -115,16 +117,10 @@ window.addEventListener("DOMContentLoaded", function() {
     //Действия при нажатии на кнопку в модальных окнах
 
     function clickModalButtons(btn, elem1, elem2, elem3, modal1, modal2, array) {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            array.forEach(() => {
-
+        btn.addEventListener('click', () => {
+            array.forEach(() => {   
                 if (elem1.value !== '' && elem2.value !== '' && elem3.value !== '' && elem1.value.length >= 2 && elem1.value.length <= 10 && elem2.value.length >= 17) {
-                    //сделать тут отправку
-                    elem1.value = '';
-                    elem2.value = '';
-                    elem3.value = '';
-    
+
                     modal.forEach(() => {
                         modal1.classList.add('modal__hidden');
                         modal2.classList.remove('modal__hidden');
@@ -141,26 +137,6 @@ window.addEventListener("DOMContentLoaded", function() {
 
     closes.forEach((i, n) => {
         closes[n].addEventListener('click', () => {
-
-            function clearFields(elem1, elem2, elem3, field1, field2, field3, array) {
-                array.forEach(() => {
-    
-                    elem1.value = '';
-                    elem2.value = '';
-                    elem3.value = '';
-                    elem1.classList.remove('red');
-                    elem2.classList.remove('red');
-                    elem3.classList.remove('red');
-                    field1.innerHTML = '';
-                    field2.innerHTML = '';
-                    field3.innerHTML = '';
-                    
-                });
-            }
-
-            clearFields(inputs1[0], inputs1[1], inputs1[2], attention1, attention2, attention12, inputs1);
-            clearFields(inputs[0], inputs[1], inputs[2], attention3, attention4, attention34, inputs);
-            clearFields(inputs2[0], inputs2[1], inputs2[2], attention5, attention6, attention56, inputs2);
 
             modal.forEach((item, number) => {
                 modal[number].classList.add('modal__hidden');
@@ -254,6 +230,23 @@ window.addEventListener("DOMContentLoaded", function() {
             input[num].addEventListener("focus", mask, false);
             input[num].addEventListener("blur", mask, false);
         });
+
+    // Отправка данных на сервер
+
+    $('form').submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+            // $('').fadeOut();
+            // $('.overlay,').fadeIn('slow');
+            $('form').trigger('reset');
+        });
+        return false;
+    });
 });
 
     

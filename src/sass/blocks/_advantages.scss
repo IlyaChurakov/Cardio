@@ -55,4 +55,12 @@
             color: #ff0000;
         }
     }
+    #logo {
+        animation-name: heartbeat;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
 }

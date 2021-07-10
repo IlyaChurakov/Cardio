@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,10 +20,10 @@
 
 </head>
 <body>
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <header class="header">
-                <a href="#footer" class="header__logo">
+                <a href="#footer" class="header__logo slideInLeft wow">
                     <img src="icons/main_logo.png" alt="logo">
                 </a>
                 <div class="header__official">
@@ -54,7 +54,7 @@
                     </div>
                     <div class="promo__icon">
                         <div class="promo__img">
-                            <img src="icons/app 08 hand cart 64.png" alt="">
+                            <img src="icons/app.png" alt="">
                         </div>
                         <div class="promo__descr">
                             Бесплатная <br>доставка
@@ -62,7 +62,7 @@
                     </div>
                     <div class="promo__icon">
                         <div class="promo__img">
-                            <img src="icons/messages 64.png" alt="">
+                            <img src="icons/messages64.png" alt="">
                         </div>
                         <div class="promo__descr">
                             Ответим <br>на все вопросы
@@ -85,22 +85,22 @@
 
             <div class="advantages__wrapper">
                 <div class="advantages__blocks">
-                    <div class="advantages__icon">
-                        <img src="icons/cup.png" alt="cup">
+                    <div class="advantages__icon zoomIn wow">
+                        <img src="icons/cup.png" alt="cup" id="cup">
                     </div>
                     <div class="advantages__descr">Делимся опытом</div>
                     <div class="advantages__subdescr">Наши сотрудники всегда готовы <br>поделиться своим опытом, <br>так как сами бегают полумарафоны, <br>переплыли Босфор, готовятся к <br>соревнованиям по триатлону!</div>
                 </div>
                 <div class="advantages__blocks">
-                    <div class="advantages__icon">
-                        <img src="icons/heart.png" alt="heart">
+                    <div class="advantages__icon zoomIn wow">
+                        <img src="icons/heart.png" alt="heart" id="heart">
                     </div>
                     <div class="advantages__descr">Заботимся о здоровье</div>
                     <div class="advantages__subdescr">Мы работаем для того, <br>чтобы Ваши занятия спортом шли на <br>пользу Вашему здоровью и были в <br>радость Вам и Вашим близким!</div>
                 </div>
                 <div class="advantages__blocks">
-                    <div class="advantages__icon">
-                        <img src="icons/shoe.png" alt="shoe">
+                    <div class="advantages__icon zoomIn wow">
+                        <img src="icons/shoe.png" alt="shoe" id="shoe">
                     </div>
                     <div class="advantages__descr">Учим бегать</div>
                     <div class="advantages__subdescr">Помогаем с обучением <br>правильной технике бега! <br>Дружим с крупнейшей школой бега в <br>России - <span>I LOVE RUNNING.</span></div>
@@ -125,27 +125,27 @@
         </div>
     </section>
 
-    <section class="carousel">
+    <div class="carousel">
         <div class="container">
             <div class="carousel__inner">
                 <div>
-                    <img src="img/slide_1.png" alt="">
+                    <img src="img/slide_1.png" alt="slide1">
                 </div>
                 <div>
-                    <img src="img/slide_2.png" alt="">
+                    <img src="img/slide_2.png" alt="slide2">
                 </div>
                 <div>
-                    <img src="img/slide_3.png" alt="">
+                    <img src="img/slide_3.png" alt="slide3">
                 </div>
             </div>
-            <button type="button" class="prev"><img src="icons/left.png"></button>
-            <button type="button" class="next"><img src="icons/right.png"></button>
+            <button type="button" class="prev"><img src="icons/left.png" alt="left"></button>
+            <button type="button" class="next"><img src="icons/right.png" alt="right"></button>
         </div>
-    </section>
+    </div>
 
     <section class="catalog" id="catalog__title">
         <div class="container">
-            <h2 class="catalog__title" >Каталог пульсометров</h2>
+            <h2 class="catalog__title slideInRight wow" data-wow-duration="2s">Каталог пульсометров</h2>
             <ul class="catalog__tabs">
                 <li class="catalog__tab"><div>Для фитнеса</div></li>
                 <li class="catalog__tab active"><div>для бега</div></li>
@@ -153,11 +153,11 @@
             </ul>
             <div class="catalog__content hidden">
                 <!-- 1.1 -->
-                <div class="catalog__block">
+                <div class="catalog__block zoomIn">
                     
 
                     <div class="catalog__wrapper_main">
-                        <img src="img/photo.png">
+                        <img src="img/photo.png" alt="photo">
                         <h2 class="title-name">Polar FT1</h2>
                         <div class="catalog__block_descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                     </div>
@@ -186,11 +186,11 @@
                     </div>
                 </div>
                 <!-- 1.2 -->
-                <div class="catalog__block">
+                <div class="catalog__block zoomIn">
                     
 
                     <div class="catalog__wrapper_main">
-                        <img src="img/photo.png">
+                        <img src="img/photo.png" alt="photo">
                         <h2 class="title-name">Suunto M2</h2>
                         <div class="catalog__block_descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                     </div>
@@ -219,11 +219,11 @@
                     </div>
                 </div>
                 <!-- 1.3 -->
-                <div class="catalog__block catalog__block_padding">
+                <div class="catalog__block catalog__block_padding zoomIn">
 
 
                     <div class="catalog__wrapper_main">
-                        <img src="img/photo.png">
+                        <img src="img/photo.png" alt="photo">
                         <h2 class="title-name">Polar FT1</h2>
                         <div class="catalog__block_descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                     </div>
@@ -252,11 +252,11 @@
                     </div>
                 </div>
                 <!-- 1.4 -->
-                <div class="catalog__block">
+                <div class="catalog__block zoomIn">
 
                     
                     <div class="catalog__wrapper_main">
-                        <img src="img/photo.png">
+                        <img src="img/photo.png" alt="photo">
                         <h2 class="title-name">Polar FT1</h2>
                         <div class="catalog__block_descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                     </div>
@@ -285,11 +285,11 @@
                     </div>
                 </div>
                 <!-- 1.5 -->
-                <div class="catalog__block">
+                <div class="catalog__block zoomIn">
 
                     
                     <div class="catalog__wrapper_main">
-                        <img src="img/photo.png">
+                        <img src="img/photo.png" alt="photo">
                         <h2 class="title-name">Suunto M2</h2>
                         <div class="catalog__block_descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                     </div>
@@ -318,11 +318,11 @@
                     </div>
                 </div>
                 <!-- 1.6 -->
-                <div class="catalog__block">
+                <div class="catalog__block zoomIn">
 
 
                     <div class="catalog__wrapper_main">
-                        <img src="img/photo.png">
+                        <img src="img/photo.png" alt="photo">
                         <h2 class="title-name">Polar FT4</h2>
                         <div class="catalog__block_descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                     </div>
@@ -353,11 +353,11 @@
             </div>
             <div class="catalog__content hidden visible">
                 <!-- 2.1 -->
-                <div class="catalog__block">
+                <div class="catalog__block zoomIn wow">
                     
 
                     <div class="catalog__wrapper_main">
-                        <img src="img/Vantage V2.png">
+                        <img src="img/VantageV2.png" alt="photo">
                         <h2 class="title-name">Polar Vantage V2</h2>
                         <div class="catalog__block_descr">Легкие спортивные часы премиум-класса для мультиспорта</div>
                     </div>
@@ -383,11 +383,11 @@
                     </div>
                 </div>
                 <!-- 2.2 -->
-                <div class="catalog__block">
+                <div class="catalog__block zoomIn wow">
                     
 
-                    <div class="catalog__wrapper_main">
-                        <img src="img/Vantage V2.png">
+                    <div class="catalog__wrapper_main ">
+                        <img src="img/VantageV2.png" alt="photo">
                         <h2 class="title-name">Polar Vantage M2</h2>
                         <div class="catalog__block_descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                     </div>
@@ -413,11 +413,11 @@
                     </div>
                 </div>
                 <!-- 2.3 -->
-                <div class="catalog__block catalog__block_padding">
+                <div class="catalog__block catalog__block_padding zoomIn wow">
 
 
-                    <div class="catalog__wrapper_main">
-                        <img src="img/Vantage V2.png">
+                    <div class="catalog__wrapper_main ">
+                        <img src="img/VantageV2.png" alt="photo">
                         <h2 class="title-name">Polar Vantage V</h2>
                         <div class="catalog__block_descr">Спортивные GPS-часы премиум-класса</div>
                     </div>
@@ -443,11 +443,11 @@
                     </div>
                 </div>
                 <!-- 2.4 -->
-                <div class="catalog__block">
+                <div class="catalog__block zoomIn wow">
 
                     
-                    <div class="catalog__wrapper_main">
-                        <img src="img/Vantage V2.png">
+                    <div class="catalog__wrapper_main ">
+                        <img src="img/VantageV2.png" alt="photo">
                         <h2 class="title-name">Polar Grit X</h2>
                         <div class="catalog__block_descr">Часы для спорта на открытом воздухе с датчиком GPS</div>
                     </div>
@@ -473,11 +473,11 @@
                     </div>
                 </div>
                 <!-- 2.5 -->
-                <div class="catalog__block">
+                <div class="catalog__block zoomIn wow">
 
                     
-                    <div class="catalog__wrapper_main">
-                        <img src="img/Vantage V2.png">
+                    <div class="catalog__wrapper_main ">
+                        <img src="img/VantageV2.png" alt="photo">
                         <h2 class="title-name">Polar M430</h2>
                         <div class="catalog__block_descr">Часы для бега с GPS</div>
                     </div>
@@ -503,11 +503,11 @@
                     </div>
                 </div>
                 <!-- 2.6 -->
-                <div class="catalog__block">
+                <div class="catalog__block zoomIn wow">
 
 
-                    <div class="catalog__wrapper_main">
-                        <img src="img/Vantage V2.png">
+                    <div class="catalog__wrapper_main ">
+                        <img src="img/VantageV2.png" alt="photo">
                         <h2 class="title-name">Polar M200</h2>
                         <div class="catalog__block_descr">Спортивные часы для бега с трекером активности 24/7</div>
                     </div>
@@ -535,11 +535,11 @@
             </div>
             <div class="catalog__content hidden">
                 <!-- 3.1 -->
-                <div class="catalog__block">
+                <div class="catalog__block zoomIn">
                     
 
                     <div class="catalog__wrapper_main">
-                        <img src="img/Triatlon.png">
+                        <img src="img/Triatlon.png" alt="photo">
                         <h2 class="title-name">Polar Ignite 2</h2>
                         <div class="catalog__block_descr">Фитнес-часы со смарт-функциями</div>
                     </div>
@@ -565,11 +565,11 @@
                     </div>
                 </div>
                 <!-- 3.2 -->
-                <div class="catalog__block">
+                <div class="catalog__block zoomIn">
                     
 
                     <div class="catalog__wrapper_main">
-                        <img src="img/Triatlon.png">
+                        <img src="img/Triatlon.png" alt="photo">
                         <h2 class="title-name">Polar Ignite</h2>
                         <div class="catalog__block_descr">Фитнес-часы с GPS и пульсометром на запястье</div>
                     </div>
@@ -595,11 +595,11 @@
                     </div>
                 </div>
                 <!-- 3.3 -->
-                <div class="catalog__block catalog__block_padding">
+                <div class="catalog__block catalog__block_padding zoomIn">
 
 
                     <div class="catalog__wrapper_main">
-                        <img src="img/Triatlon.png">
+                        <img src="img/Triatlon.png" alt="photo">
                         <h2 class="title-name">Polar Unite</h2>
                         <div class="catalog__block_descr">Фитнес-часы с функциями измерения ЧСС на запястье</div>
                     </div>
@@ -625,11 +625,11 @@
                     </div>
                 </div>
                 <!-- 3.4 -->
-                <div class="catalog__block">
+                <div class="catalog__block zoomIn">
 
                     
                     <div class="catalog__wrapper_main">
-                        <img src="img/Triatlon.png">
+                        <img src="img/Triatlon.png" alt="photo">
                         <h2 class="title-name">Polar A370</h2>
                         <div class="catalog__block_descr">Фитнес-трекер с мониторингом сердечного ритма</div>
                     </div>
@@ -655,11 +655,11 @@
                     </div>
                 </div>
                 <!-- 3.5 -->
-                <div class="catalog__block">
+                <div class="catalog__block zoomIn">
 
                     
                     <div class="catalog__wrapper_main">
-                        <img src="img/Triatlon.png">
+                        <img src="img/Triatlon.png" alt="photo">
                         <h2 class="title-name">Polar Verity Sense</h2>
                         <div class="catalog__block_descr">Оптический датчик ЧСС</div>
                     </div>
@@ -685,11 +685,11 @@
                     </div>
                 </div>
                 <!-- 3.6 -->
-                <div class="catalog__block">
+                <div class="catalog__block zoomIn">
 
 
                     <div class="catalog__wrapper_main">
-                        <img src="img/Triatlon.png">
+                        <img src="img/Triatlon.png" alt="photo">
                         <h2 class="title-name">Polar H10</h2>
                         <div class="catalog__block_descr">Датчик ЧСС</div>
                     </div>
@@ -722,7 +722,7 @@
         <div class="container">
             <h1>отзывы клиентов</h1>
 
-            <div class="comments__wrapper">
+            <div class="comments__wrapper fadeInUp wow" data-wow-duration='1.5s' data-wow-delay='0.1s'>
                 <div class="comments__avatar">
                     <img src="img/photo_1.png" alt="avatar">
                 </div>
@@ -734,7 +734,7 @@
                 </div>
             </div>
 
-            <div class="comments__wrapper">
+            <div class="comments__wrapper fadeInUp wow" data-wow-duration='1.5s' data-wow-delay='0.2s'>
                 <div class="comments__avatar">
                     <img src="img/photo_2.png" alt="">
                 </div>
@@ -745,7 +745,7 @@
                 </div>
             </div>
 
-            <div class="comments__wrapper">
+            <div class="comments__wrapper fadeInUp wow" data-wow-duration='1.5s' data-wow-delay='0.3s'>
                 <div class="comments__avatar">
                     <img src="img/photo_3.png" alt="">
                 </div>
@@ -760,11 +760,11 @@
     </section>
 
     <footer class="footer" id="footer">
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aeabc7601bb92f1ceff0cde7856b3687c477ea98c49bdbc4666d43ce9680e236d&amp;width=100%25&amp;height=630&amp;lang=ru_RU&amp;scroll=false"></script>
+        <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aeabc7601bb92f1ceff0cde7856b3687c477ea98c49bdbc4666d43ce9680e236d&amp;width=100%25&amp;height=630&amp;lang=ru_RU&amp;scroll=false"></script>
         
         <div class="footer__information">
             <address>Москва, Мясницкий проезд, д.3с1</address>
-            <a href="tel: 84999228974" class="footer__phone">8 (499) 922-89-74</a>
+            <a href="tel:84999228974" class="footer__phone">8 (499) 922-89-74</a>
             <div class="footer__wrapper">
                 <a href="https://ru-ru.facebook.com/" class="footer__icon">
                     <img src="icons/facebookblack.png" alt="facebook">
@@ -817,9 +817,16 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <a href="#up" class="pageup">
+        <img src="icons/circle.svg" alt="up">
+    </a>
+    
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -48,11 +48,7 @@ window.addEventListener("DOMContentLoaded", function() {
           attention56 = document.querySelector('.attention56'),
           forms = document.querySelectorAll('form');
 
-<<<<<<< HEAD
         //   console.log(forms);
-=======
-          console.log(forms);
->>>>>>> 6a2c932641460f8c41d3afb009db3e497b9a8cc3
 
     //Табы
     
@@ -99,15 +95,32 @@ window.addEventListener("DOMContentLoaded", function() {
     });
 
     //Действия при нажатии на кнопки секции консультации и секции каталога
+    // forms[0].addEventListener('input', () => {
+    //     inputs1.forEach(() => {
+    //         if (inputs1[0].value !== '' && inputs1[1].value !== '' && inputs1[2].value !== '' && inputs1[0].value.length >= 2 && inputs1[0].value.length <= 10 && inputs1[1].value.length >= 17) {
+    //             btn3.disabled = false;
+    //             btn3.addEventListener('click', () => {
+    //                 openModal(modal[2]);
+    //             });
+    //         } else {
+    //             btn3.disabled = true;
+    //         }
+    //     });
+    // });
 
-    btn3.addEventListener('click', () => {
-    
-        inputs1.forEach(() => {
-        // if (inputs1[0].value !== '' && inputs1[1].value !== '' && inputs1[2].value !== '' && inputs1[0].value.length >= 2 && inputs1[0].value.length <= 10 && inputs1[1].value.length >= 17) {
-            openModal(modal[2]);
-        // } 
-        });
-    });
+    // forms[1].addEventListener('input', () => {
+    //     inputs.forEach(() => {
+    //         if (inputs[0].value !== '' && inputs[1].value !== '' && inputs[2].value !== '' && inputs[0].value.length >= 2 && inputs[0].value.length <= 10 && inputs[1].value.length >= 17) {
+    //             modalButton.disabled = false;
+    //             modalButton.addEventListener('click', () => {
+    //                 modal[0].classList.add('modal__hidden');
+    //                 openModal(modal[2]);
+    //             });
+    //         } else {
+    //             modalButton.disabled = true;
+    //         }
+    //     });
+    // });
 
     btn4.forEach((item, num) => {
         btn4[num].addEventListener('click', () => {
@@ -120,22 +133,24 @@ window.addEventListener("DOMContentLoaded", function() {
 
     //Действия при нажатии на кнопку в модальных окнах
 
-    function clickModalButtons(btn, elem1, elem2, elem3, modal1, modal2, array) {
-        btn.addEventListener('click', () => {
-            array.forEach(() => {   
+    function clickModalButtons(form, btn, elem1, elem2, elem3, modal1, modal2, array) {
+        form.addEventListener('input', () => {
+            array.forEach(() => {
                 if (elem1.value !== '' && elem2.value !== '' && elem3.value !== '' && elem1.value.length >= 2 && elem1.value.length <= 10 && elem2.value.length >= 17) {
-
-                    modal.forEach(() => {
+                    btn.disabled = false;
+                    btn.addEventListener('click', () => {
                         modal1.classList.add('modal__hidden');
-                        modal2.classList.remove('modal__hidden');
+                        openModal(modal[2]);
                     });
+                } else {
+                    btn.disabled = true;
                 }
             });
         });
     }
-    
-    clickModalButtons(modalButton, inputs[0], inputs[1], inputs[2], modal[0], modal[2], inputs);
-    clickModalButtons(modalButton2, inputs2[0], inputs2[1], inputs2[2], modal[1], modal[2], inputs2);
+    clickModalButtons(forms[0], btn3, inputs1[0], inputs1[1], inputs1[2], modal[0], modal[2], inputs1);
+    clickModalButtons(forms[1], modalButton, inputs[0], inputs[1], inputs[2], modal[0], modal[2], inputs);
+    clickModalButtons(forms[2], modalButton2, inputs2[0], inputs2[1], inputs2[2], modal[1], modal[2], inputs2);
 
     //Действия при нажатии на крестик в модальных окнах
 
@@ -235,7 +250,6 @@ window.addEventListener("DOMContentLoaded", function() {
             input[num].addEventListener("blur", mask, false);
         });
 
-<<<<<<< HEAD
     // Отправка данных на сервер
 
     $('form').submit(function(e) {
@@ -246,46 +260,33 @@ window.addEventListener("DOMContentLoaded", function() {
             data: $(this).serialize()
         }).done(function() {
             $(this).find("input").val("");
-            // $('').fadeOut();
-            // $('.overlay,').fadeIn('slow');
+            // $('#main, #buy').fadeOut();
+            // $('.overlay, #waiting').fadeIn('slow');
             $('form').trigger('reset');
         });
         return false;
     });
-=======
-        // forms.forEach((item, num) => {
-        //     forms[num].addEventListener('submit', (e) => {
-        //         e.preventDefault();
-        //         forms.ajax({
-        //             type: 'POST',
-        //             url: 'mailer/smart.php',
-        //             data: forms[num].serialize()
-        //         });
-        //         return false;
-        //     });
-        // });
 
-    let	idProduct = 321;
-    let qtyProduct = 2;
+    //Scroll
 
-    const request = new XMLHttpRequest(),
-            url = "ajax_quest.php",
-            params = forms[0].value + forms[1].value + forms[2].value;
-
-    request.open("POST", url, true);
-
-    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-    request.addEventListener("readystatechange", () => {
-
-        if(request.readyState === 4 && request.status === 200) {       
-            console.log(request.responseText);
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1600) {
+            $('.pageup').fadeIn();
+        } else {
+            $('.pageup').fadeOut();
         }
     });
 
-    request.send(params);
+    $(function(){
+        $("a[href^='#']").click(function(){
+                var _href = $(this).attr("href");
+                $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+                return false;
+        });
+    });
 
->>>>>>> 6a2c932641460f8c41d3afb009db3e497b9a8cc3
+    new WOW().init();
+
 });
 
     

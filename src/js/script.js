@@ -152,7 +152,7 @@ window.addEventListener("DOMContentLoaded", function() {
     clickModalButtons(forms[1], modalButton, inputs[0], inputs[1], inputs[2], modal[0], modal[2], inputs);
     clickModalButtons(forms[2], modalButton2, inputs2[0], inputs2[1], inputs2[2], modal[1], modal[2], inputs2);
 
-    //Действия при нажатии на крестик в модальных окнах
+    //Действия при нажатии на крестик в модальных окнах и кнопка формы в секции консультации
 
     closes.forEach((i, n) => {
         closes[n].addEventListener('click', () => {

@@ -1124,6 +1124,12 @@
     padding-left: 30px;
     padding-right: 30px;
   }
+  .consultation .attention1, .consultation .attention2, .consultation .attention12 {
+    color: #fff;
+    width: 303px;
+    font-size: 13px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 575px) {

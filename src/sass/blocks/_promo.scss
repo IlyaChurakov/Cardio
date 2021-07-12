@@ -1,7 +1,8 @@
 .promo {
     min-height: 755px;
     padding: 21px 150px 93px 150px;
-    background: url(../img/bg_firstScreen.png) center (center/cover) no-repeat;
+    background: url(../img/new_fone.jpg) center (center/cover) no-repeat;
+    // background-color: black;
     width: 100%;
     &__header {
         margin-top: 91px;
@@ -10,7 +11,9 @@
         line-height: 42px;
         text-align: right;
         text-transform: uppercase;
-        color: #FFFFFF;
+        // color: #FFFFFF;
+        filter: invert(1);
+        mix-blend-mode: difference;
     }
     &__subheader {
         margin-top: 17px;
@@ -19,7 +22,9 @@
         line-height: 24px;
         text-align: right;
         text-transform: uppercase;
-        color: #FFFFFF;
+        // color: #FFFFFF;
+        filter: invert(1);
+        mix-blend-mode: difference;
     }
     &__wrapper {
         display: flex;
@@ -41,6 +46,9 @@
         display: flex;
         justify-content: center;
         height: 46px;
+        // img {
+        //     mix-blend-mode: difference;
+        // }
     }
     &__descr {
         margin-top: 20px;
@@ -50,6 +58,8 @@
         line-height: 14px;
         text-align: center;
         color: #FFFFFF;
+        // filter: invert(1);
+        // mix-blend-mode: difference;
     }
     &__link {
         margin-top: 8px;
@@ -57,14 +67,18 @@
         font-size: 16px;
         line-height: 25px;
         text-align: right;
-        color: #FFFFFF;
+        color: #ffffff;
+        // filter: invert(1);
+        // mix-blend-mode: difference;
         a {
             font-weight: 500;
             font-size: 16px;
             line-height: 25px;
             text-align: right;
             text-decoration-line: underline;
-            color: #FFFFFF;
+            color: #ffffff;
+            // filter: invert(1);
+            // mix-blend-mode: difference;
             &:hover {
                 color: rgba(255, 255, 255, 0.719);
             }

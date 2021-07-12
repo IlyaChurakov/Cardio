@@ -4,8 +4,12 @@
     align-items: center;
     &__logo {
         width: 250px;
+        // color: rgb(255, 255, 255);
         img {
             width: 100%;
+            // background-color: #fff;
+            filter: invert(1);
+            // mix-blend-mode: difference;
         }
     }
     &__official {
@@ -13,7 +17,9 @@
         font-size: 12px;
         line-height: 12px;
         text-align: center;
-        color: #FFFFFF;
+        // color: #FFFFFF;
+        filter: invert(1);
+        mix-blend-mode: difference;
         span {
             font-family: 'MuseoModerno';
             display: block;
@@ -21,7 +27,9 @@
             font-size: 18px;
             line-height: 29px;
             text-align: center;
-            color: #FFFFFF;
+            // color: #FFFFFF;
+            // filter: invert(1);
+            // mix-blend-mode: difference;
         }
     }
     &__phone {
@@ -29,10 +37,14 @@
         font-weight: bold;
         font-size: 18px;
         text-align: right;
-        color: #FFFFFF;
+        color: #000000;
+        filter: invert(1);
+        mix-blend-mode: difference;
         text-decoration: none;
         &:hover {
-            color: #fff;
+            color: rgb(0, 0, 0);
+            filter: invert(1);
+            mix-blend-mode: difference;
             text-decoration: none;
         }
     }
